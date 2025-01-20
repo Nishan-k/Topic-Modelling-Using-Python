@@ -28,4 +28,7 @@ By applying topic modeling, we can effectively categorize and interpret text dat
 
 <h2 id="Datasets">1. Datasets</h2>
 
-Here, I will be using a demo dataset for this project. It has two columns in total.
+Here, I will be using a demo dataset for this project. It has two columns initially, called Article and their respective titles, but I will drop the titles column since we are creating a model to find these titles.
+
+This `Article` column has many articles, which we will use to traind LDA and then set 5 topics. And all of these articles will be clustered in these 5 different articles.
+
