@@ -15,5 +15,17 @@ This method analyze word distribution within the text corpus to determine the pr
 By applying topic modeling, we can effectively categorize and interpret text data, which is invaluable in various applications such as document clustering, information retrieval, recommendation systems, and sentiment analysis.
 
 
+## Table of Contents
+
+<ol>
+<li><a href="#Datasets"><b> Datasets </a></b></li>
+<li><a href="#EDA"><b> Exploratory Data Analysis </a></b></li>
+<li><a href="#finalization"><b> Model Finalization </a></b></li>
+<li><a href="#saveload"><b> Saving & Loading the Model </a></b></li>
+<li><a href="#conclusion"><b> Conclusion </a></b></li>
+</ol>
 
 
+<h2 id="Datasets">1. Datasets</h2>
+
+Here, I will be using a demo dataset for this project. It has two columns in total.
