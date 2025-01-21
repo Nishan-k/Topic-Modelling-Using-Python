@@ -38,10 +38,12 @@ This `Article` column has many articles, which we will use to train
  in these 5 different articles.
 
 **Initial dataset:**
+
 ![alt text](images/image2.png)
 
 
 **The dataset we will be using:**
+
 ![alt text](images/image3.png)
 
 In total there are 34 Articles in this dataset.
