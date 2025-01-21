@@ -85,3 +85,13 @@ we need to have a conversation with the experts on the number of topics we want.
 
 So, after training, we get a result in `(34, 5)` shape like this:
 
+![alt text](images/image7.png)
+
+Here:
+
+**- row (34):** It represents the number of Articles we had.
+
+**- column (5):** These represent the number of topics we set when training the `LDA` and the
+value are the probability of falling a particular documnent in a particular title.
+
+
