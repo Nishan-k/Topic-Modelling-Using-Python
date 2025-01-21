@@ -114,3 +114,9 @@ assigned a topic comparing these Articles on 5 of these clusters.
 
 So, I took help from ChatGPT for this and defined the topics as below:
 ![alt text](images/image10.png)
+
+And then mapped the titles with their respective topic labels:
+
+![alt text](images/image11.png)
+
+
