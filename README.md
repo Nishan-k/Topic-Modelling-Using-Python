@@ -95,3 +95,14 @@ Here:
 value are the probability of falling a particular documnent in a particular title.
 
 
+Now, I will pull out the index values using `np.argmax()`, it will give us the index value 
+which has the highest probability out of all and 
+the resulting value (`topic_labels`) would look like below:
+
+![alt text](images/image8.png)
+
+So, these are the 5 topics for each article, the values ranges from 0 to 4.
+
+
+Adding the new column as the topic label in the existing data:
+![alt text](images/image9.png)
