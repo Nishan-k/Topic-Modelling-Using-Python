@@ -19,16 +19,69 @@ By applying topic modeling, we can effectively categorize and interpret text dat
 
 <ol>
 <li><a href="#Datasets"><b> Datasets </a></b></li>
-<li><a href="#EDA"><b> Exploratory Data Analysis </a></b></li>
-<li><a href="#finalization"><b> Model Finalization </a></b></li>
-<li><a href="#saveload"><b> Saving & Loading the Model </a></b></li>
+<li><a href="#DataCleaning"><b> Data Cleaning </a></b></li>
+<li><a href="#vectorspace"><b> Vector Space </a></b></li>
+<li><a href="#lda"><b> LDA(Latent-Dirichlet-Allocation) </a></b></li>
 <li><a href="#conclusion"><b> Conclusion </a></b></li>
 </ol>
 
 
 <h2 id="Datasets">1. Datasets</h2>
 
-Here, I will be using a demo dataset for this project. It has two columns initially, called Article and their respective titles, but I will drop the titles column since we are creating a model to find these titles.
+Here, I will be using a demo dataset for this project. It has two columns initially, 
+called `Article` and their respective `Titles`, but I will drop the `Titles` column since 
+we are creating a model to find these `Titles`.
 
-This `Article` column has many articles, which we will use to traind LDA and then set 5 topics. And all of these articles will be clustered in these 5 different articles.
+This `Article` column has many articles, which we will use to train
+ `LDA` and then set 5 topics. And all of these articles will be clustered 
+ in these 5 different articles.
+
+**Initial dataset:**
+![alt text](images/image2.png)
+
+
+**The dataset we will be using:**
+![alt text](images/image3.png)
+
+In total there are 34 Articles in this dataset.
+
+
+<h2 id="DataCleaning">2. Data Cleaning</h2>
+When working with textual data, it is important to get rid of punctuations, stop words and 
+to lemmatize (bringing the words to their root form) in order to remove complications and 
+give the model a data in proper format for better learning.
+
+So, I have created a function called `preprocess_text`, that will take in the data and returns
+the pre-processed text.
+
+I will be using `.apply()` method to implement this function row wise as below:
+
+![alt text](images/image4.png)
+
+
+
+<h2 id="vectorspace">3. Vector Space</h2>
+
+The textual data needs to be converted into a numerical format since the model cannot
+directly work with the data if it is in text. So, in this step, once the data
+has been pre-processed, I will use `TfidfVectorizer()`, in order to vectorize the data.
+
+The vectorized data willl be in sparsematrix format because of the size and number of
+zeroes in the vector, but to get an idea of how it looks like, here, below, we can
+see how the sparse data at `index[0]` would look like if converted to an array, it is just
+a part of the output:
+
+![alt text](images/image5.png)
+
+
+<h2 id="lda">4. LDA(Latent-Dirichlet-Allocation)</h2>
+
+Now, we have a vectorized pre-processed data, and will be using it to train `LDA`:
+
+![alt text](images/image6.png)
+
+Here, I have defined the `n_components=5`, which we can change as per the need, in real-world, 
+we need to have a conversation with the experts on the number of topics we want.
+
+So, after training, we get a result in `(34, 5)` shape like this:
 
