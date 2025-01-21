@@ -22,7 +22,7 @@ By applying topic modeling, we can effectively categorize and interpret text dat
 <li><a href="#DataCleaning"><b> Data Cleaning </a></b></li>
 <li><a href="#vectorspace"><b> Vector Space </a></b></li>
 <li><a href="#lda"><b> LDA(Latent-Dirichlet-Allocation) </a></b></li>
-<li><a href="#conclusion"><b> Conclusion </a></b></li>
+<li><a href="#implementation"><b> Implementation </a></b></li>
 </ol>
 
 
@@ -120,3 +120,13 @@ And then mapped the titles with their respective topic labels:
 ![alt text](images/image11.png)
 
 
+<h2 id="implementation">5. Implementation</h2>
+
+Now, we have our final model ready, so in the future, if someone wants to 
+know the title or in which genre a particular Article falls into, they can
+use this model to predict it.
+
+For this, I created a function called `topic_modeling`, that would take an input
+for the article from
+the user, preprocess it, vectorize it and finally print out the 
+**Topic label** and its **Title** like below:
