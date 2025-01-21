@@ -106,3 +106,11 @@ So, these are the 5 topics for each article, the values ranges from 0 to 4.
 
 Adding the new column as the topic label in the existing data:
 ![alt text](images/image9.png)
+
+But the problem here is, these numeric values doesn't add any meaning, so as mentioned 
+earlier, a proper discussion has to be held with the domain expert in order to defined 
+how many topics we need and once we get these results, each of these values need to be 
+assigned a topic comparing these Articles on 5 of these clusters.
+
+So, I took help from ChatGPT for this and defined the topics as below:
+![alt text](images/image10.png)
